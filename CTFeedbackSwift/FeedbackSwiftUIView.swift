@@ -20,6 +20,8 @@ public struct FeedbackSwiftUIView: View {
     
     enum Topic: String, CaseIterable {
         case Question = "Question"
+        case Request  = "Request"
+        case Bug      = "Bug Report"
         case Others   = "Other"
     }
     
