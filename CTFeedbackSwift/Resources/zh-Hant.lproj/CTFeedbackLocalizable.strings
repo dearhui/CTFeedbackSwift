@@ -49,11 +49,17 @@
 "CTFeedback.Camera" ="拍照";
 
 "CTFeedback.PhotoLibrary" ="從相冊中選取";
-"CTFeedback.UserDetail" = "User Detail";
+
+"CTFeedback.UserDetail" = "使用者明細";
+
 "CTFeedback.FeedbackGenerationErrorMessage" = "Feedback Generation Error";
-"CTFeedback.UnknownError" = "Unknown Error";
-"CTFeedback.Delete" = "Delete";
+
+"CTFeedback.UnknownError" = "未知錯誤";
+
+"CTFeedback.Delete" = "刪除";
+
 "CTFeedback.requiredCameraAccess" = "Camera access is absolutely necessary to use this app";
+
 "CTFeedback.requiredLibraryAccess" = "Library access is absolutely necessary to use this app";
 
 "CTFeedback.BodyPlaceholder" = "在此輸入文字...";
