@@ -9,7 +9,7 @@ public struct DeviceNameItem: FeedbackItemProtocol {
     var deviceName: String {
         guard let path = Bundle.platformNamesPlistPath,
               let dictionary = NSDictionary(contentsOfFile: path) as? [String: String]
-            else { return "" }
+            else { return platform }
 
         let rawPlatform = platform
         return dictionary[rawPlatform] ?? rawPlatform
@@ -24,7 +24,8 @@ public struct DeviceNameItem: FeedbackItemProtocol {
                 String.init(validatingUTF8: ptr)
             }
         }) else { return "Unknown" }
-        return String(validatingUTF8: machine) ?? "Unknown"
+//        return String(validatingUTF8: machine) ?? "Unknown"
+        return machine
     }
 
     public let isHidden: Bool = false

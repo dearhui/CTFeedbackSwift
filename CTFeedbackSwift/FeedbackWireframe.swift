@@ -106,7 +106,7 @@ extension FeedbackWireframe: FeedbackWireframeProtocol {
 
         alertController.addAction(UIAlertAction(title: CTLocalizedString("CTFeedback.Cancel"),
                                                 style: .cancel))
-        let screenSize = UIScreen.main.bounds
+//        let screenSize = UIScreen.main.bounds
         alertController.popoverPresentationController?.sourceView = viewController?.view
         alertController.popoverPresentationController?.sourceRect = cellRect
         alertController.popoverPresentationController?.permittedArrowDirections = .any
@@ -183,7 +183,8 @@ private extension FeedbackWireframe {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             if let url = URL(string: UIApplication.openSettingsURLString) {
-                UIApplication.shared.openURL(url)
+//                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }))
         viewController?.present(alert, animated: true)
@@ -195,7 +196,8 @@ private extension FeedbackWireframe {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             if let url = URL(string: UIApplication.openSettingsURLString) {
-                UIApplication.shared.openURL(url)
+//                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }))
         viewController?.present(alert, animated: true)
