@@ -5,14 +5,14 @@
 
 import Foundation
 
-struct AppVersionItem: FeedbackItemProtocol {
-    var version: String {
+public struct AppVersionItem: FeedbackItemProtocol {
+    public var version: String {
         guard let shortVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
             else { return "" }
         return shortVersion
     }
 
-    let isHidden: Bool
+    public let isHidden: Bool
 
-    init(isHidden: Bool) { self.isHidden = isHidden }
+    public init(isHidden: Bool) { self.isHidden = isHidden }
 }
