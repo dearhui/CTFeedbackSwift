@@ -116,6 +116,7 @@ public struct FeedbackSwiftUIView: View {
             }
         }
         .navigationTitle(title)
+        .listStyle(.insetGrouped)
         .toolbar {
             ToolbarItem {
                 mailButton
@@ -192,17 +193,13 @@ enum FeedbackAlert {
 
 @available(iOS 14.0, *)
 extension FeedbackSwiftUIView {
-    fileprivate func ListRow(name: String, value: String = "", isButton: Bool = false) -> some View {
+    fileprivate func ListRow(name: String, value: String = "") -> some View {
         HStack {
             Text(CTLocalizedString(name))
                 .foregroundColor(.primary)
             Spacer()
             Text(value)
                 .foregroundColor(.secondary)
-            if isButton {
-                Image(systemName: "chevron.forward")
-                    .foregroundColor(.secondary)
-            }
         }
     }
 }
