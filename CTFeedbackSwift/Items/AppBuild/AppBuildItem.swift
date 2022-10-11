@@ -6,7 +6,7 @@
 import Foundation
 
 public struct AppBuildItem: FeedbackItemProtocol {
-    var buildString: String {
+    public var buildString: String {
         guard let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String
             else { return "" }
         return build
