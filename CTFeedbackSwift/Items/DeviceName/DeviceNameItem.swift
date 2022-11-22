@@ -6,7 +6,9 @@
 import Foundation
 
 public struct DeviceNameItem: FeedbackItemProtocol {
-    var deviceName: String {
+    public init() { }
+    
+    public var deviceName: String {
         guard let path = Bundle.platformNamesPlistPath,
               let dictionary = NSDictionary(contentsOfFile: path) as? [String: String]
             else { return platform }
